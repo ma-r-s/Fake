@@ -1,0 +1,8 @@
+{
+	"appId": "com.fake.mars",
+	"appName": "Fake",
+	"webDir": "build",
+	"server": {
+		"androidScheme": "https"
+	}
+}

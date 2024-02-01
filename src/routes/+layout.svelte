@@ -1,7 +1,7 @@
 <script>
-	import '../app.pcss';
+	import '../app.pcss'; //
 </script>
 
-<div class="touch-none select-none">
+<div class="touch-none">
 	<slot />
 </div>

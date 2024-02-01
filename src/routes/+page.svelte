@@ -16,9 +16,9 @@
 		>
 			<Less class="h-9 w-9" />
 		</button>
-		<div class="w-44 text-center text-4xl">
+		<p class="w-44 text-center text-4xl">
 			{players} Players
-		</div>
+		</p>
 		<button
 			class={`btn btn-secondary px-2 ${players == maxPLayers ? 'invisible' : ''}`}
 			on:click={() => players++}
