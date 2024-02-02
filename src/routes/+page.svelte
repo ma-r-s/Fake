@@ -1,4 +1,10 @@
 <script>
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
+	onMount(() => {
+		themeChange(false);
+		// 👆 false parameter is required for svelte
+	});
 	import { playersStore, fakeArtistStore } from '$lib/stores.js';
 	import Left from 'virtual:icons/material-symbols/arrow-back-rounded';
 	import Right from 'virtual:icons/material-symbols/arrow-forward-rounded';
@@ -24,9 +30,10 @@
 				<input
 					type="radio"
 					name="theme-dropdown"
-					class="theme-controller btn btn-ghost btn-block justify-start text-lg"
+					class=" btn btn-ghost btn-block justify-start text-lg"
 					aria-label={theme}
 					value={theme}
+					data-set-theme={theme}
 				/>
 			</li>
 		{/each}

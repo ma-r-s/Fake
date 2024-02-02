@@ -28,9 +28,9 @@
 
 	{#if show}
 		{#if currPlayer == fakeArtist}
-			<p class="text-4xl">You are the FAKE artist!</p>
+			<p class="text-7xl">You are the FAKE artist!</p>
 		{:else}
-			<p class="text-4xl">You are a REAL artist!</p>
+			<p class="text-7xl">You are a REAL artist!</p>
 			<p class="text-4xl">Draw: {selectedObject}</p>
 		{/if}
 		{#if currPlayer < numPlayers - 1}
