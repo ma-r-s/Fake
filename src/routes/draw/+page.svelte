@@ -31,7 +31,7 @@
 			<a class="btn-large btn btn-secondary text-2xl" on:click={save} href="./vote">Vote</a>
 		{/if}
 	</div>
-	<div class="m-6 w-11/12 grow border-4 border-dashed border-black">
+	<div class="m-6 w-11/12 grow border-8 border-dashed border-black">
 		<DrawCanvas {color} bind:canvas />
 	</div>
 </div>

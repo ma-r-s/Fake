@@ -26,7 +26,7 @@
 			{/if}
 		</p>
 
-		<div class="border-8 border-black bg-white">
+		<div class="border-8 border-dashed border-black bg-white">
 			<img src={image} alt="canvas" class="" />
 		</div>
 	</div>
