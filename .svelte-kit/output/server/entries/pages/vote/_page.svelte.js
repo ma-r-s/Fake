@@ -9,7 +9,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_colors = subscribe(colors, (value) => $colors = value);
   let currPlayer = 0;
   let votes = Array($playersStore).fill(0);
-  let image = $canvasImageStore.toDataURL();
+  const image = $canvasImageStore.toDataURL();
   $$unsubscribe_playersStore();
   $$unsubscribe_canvasImageStore();
   $$unsubscribe_colors();

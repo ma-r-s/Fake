@@ -3,7 +3,7 @@
 
 	let currPlayer = 0;
 	let votes = Array($playersStore).fill(0);
-	let image = $canvasImageStore.toDataURL();
+	const image = $canvasImageStore.toDataURL();
 
 	const vote = (i) => {
 		if (currPlayer < $playersStore) {
