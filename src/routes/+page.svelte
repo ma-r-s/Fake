@@ -3,7 +3,7 @@
 	import logo from '$lib/assets/logo.svg';
 	import Less from '~icons/ic/round-less-than';
 	import Greater from '~icons/ic/round-greater-than';
-	const maxPLayers = 15;
+	const maxPLayers = 9;
 	const minPlayers = 3;
 	let players = 3;
 

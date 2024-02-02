@@ -20,10 +20,10 @@
 	});
 </script>
 
-<a href="./topics" class="absolute flex items-center gap-2">
+<button on:click={() => history.back()} class="absolute left-8 top-8 flex items-center gap-2">
 	<ArrowBackRounded class="h-8 w-8" />
-	<p class="text-xl">Back</p>
-</a>
+	<p class="text-2xl">Back</p>
+</button>
 <div class="flex min-h-screen flex-col items-center justify-center">
 	<p class="text-3xl font-bold">Player {currPlayer + 1}</p>
 
@@ -40,17 +40,17 @@
 					show = !show;
 					currPlayer++;
 				}}
-				class="btn btn-secondary m-4">Next player</button
+				class="btn btn-secondary btn-lg m-4 text-2xl">Next player</button
 			>
 		{:else}
-			<a href="/draw" class="btn m-4">Start game!</a>
+			<a href="/draw" class="btn btn-neutral btn-lg m-4 text-2xl">Start game!</a>
 		{/if}
 	{:else}
 		<button
 			on:click={() => {
 				show = !show;
 			}}
-			class="btn btn-primary m-4">Show me!</button
+			class="btn btn-primary btn-lg m-4 text-2xl">Show me!</button
 		>
 	{/if}
 </div>

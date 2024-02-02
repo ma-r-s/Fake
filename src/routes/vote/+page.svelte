@@ -1,7 +1,10 @@
 <script>
-	import { playersStore, colors, mostVotedStore } from '$lib/stores.js';
+	import { canvasImageStore, playersStore, colors, mostVotedStore } from '$lib/stores.js';
+
 	let currPlayer = 0;
 	let votes = Array($playersStore).fill(0);
+	let image = $canvasImageStore.toDataURL();
+
 	const vote = (i) => {
 		if (currPlayer < $playersStore) {
 			votes[i]++;
@@ -11,23 +14,28 @@
 			mostVotedStore.set(votes.indexOf(Math.max(...votes)));
 		}
 	};
-	const mostVoted = () => {};
 </script>
 
-<div class="flex min-h-screen flex-col items-center justify-evenly text-2xl font-bold">
-	<p class="text-4xl">
-		{#if currPlayer < $playersStore}
-			Player
-			{currPlayer + 1} vote
-		{:else}
-			Player votes
-		{/if}
-	</p>
-	<div class="grid grid-cols-2 gap-x-10 gap-y-6">
+<div class="flex h-screen text-2xl font-bold">
+	<div class="flex-col justify-center p-8">
+		<p class=" m-8 text-center text-4xl">
+			{#if currPlayer < $playersStore}
+				Player {currPlayer + 1} vote
+			{:else}
+				Player votes
+			{/if}
+		</p>
+
+		<div class="border-8 border-black bg-white">
+			<img src={image} alt="canvas" class="" />
+		</div>
+	</div>
+
+	<div class="flex flex-col flex-wrap items-center justify-center gap-6 p-8">
 		{#each Array($playersStore) as _, i}
-			<div class="flex gap-4">
+			<div class="flex gap-2">
 				<button
-					class={`btn `}
+					class="btn btn-secondary btn-lg text-xl"
 					on:click={() => {
 						vote(i);
 					}}
@@ -43,13 +51,9 @@
 			</div>
 		{/each}
 	</div>
-	{#if currPlayer == $playersStore}
-		<a
-			href="./reveal"
-			class="btn btn-primary"
-			on:click={() => {
-				mostVoted;
-			}}>Reveal</a
-		>
-	{/if}
+	<a
+		href="./reveal"
+		class={`btn btn-neutral btn-lg absolute left-10 top-10 text-2xl ${currPlayer == $playersStore ? '' : 'invisible'}`}
+		>Reveal</a
+	>
 </div>

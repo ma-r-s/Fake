@@ -4,9 +4,9 @@
 	export let width;
 	export let height;
 	export let color;
-	export let background = '#fff';
+	export let background = 'white';
 
-	let canvas;
+	export let canvas;
 	let context;
 	let isDrawing;
 	let start;
