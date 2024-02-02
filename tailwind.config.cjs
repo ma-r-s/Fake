@@ -7,14 +7,15 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				bubblegum: ['Fredoka', 'sans-serif']
+				title: ['Bebas Neue'],
+				custom: ['Courier']
 			}
 		}
 	},
 
 	plugins: [daisyui],
 	daisyui: {
-		themes: ['cupcake']
+		themes: ['dim', 'retro', 'cyberpunk', 'valentine', 'aqua']
 	}
 };
 

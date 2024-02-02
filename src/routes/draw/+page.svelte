@@ -22,7 +22,7 @@
 
 <div class="flex min-h-screen flex-col items-center justify-center">
 	<div class="mt-6 flex w-full items-center justify-around">
-		<p class="text-2xl font-bold">Player {currPlayer + 1}</p>
+		<p class="text-5xl font-bold">Player {currPlayer + 1}</p>
 		{#if currPlayer < $playersStore - 1}
 			<button class="btn-large btn btn-neutral text-2xl" on:click={nextPlayer}>Next Player</button>
 		{:else if firstRound}

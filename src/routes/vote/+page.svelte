@@ -16,9 +16,9 @@
 	};
 </script>
 
-<div class="flex h-screen text-2xl font-bold">
+<div class="flex h-screen text-3xl font-bold">
 	<div class="flex-col justify-center p-8">
-		<p class=" m-8 text-center text-4xl">
+		<p class=" m-8 text-center text-6xl">
 			{#if currPlayer < $playersStore}
 				Player {currPlayer + 1} vote
 			{:else}
