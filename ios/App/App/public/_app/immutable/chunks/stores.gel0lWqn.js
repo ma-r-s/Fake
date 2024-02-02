@@ -1,0 +1,1 @@
+import{w as F}from"./index.cpQ9Qvl4.js";const t=F(""),o=F(5),e=F(0),a=F(""),r=F(0),c=F(["#FF0000","#2222FF","#55EE66","#FF9900","#A000A0","#00FFFF","#008000","#FF00FF","#FFEE33","#A52A2A","#FF4500","#1E90FF","#32CD32","#FF6347","#8A2BE2","#00CED1","#7CFC00","#FF69B4","#FFFF00","#8B4513"]);export{c as a,t as c,e as f,r as m,o as p,a as s};
